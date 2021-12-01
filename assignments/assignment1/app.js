@@ -3,15 +3,17 @@
 
 angular.module('LunchCheck', [])
 
-.controller('LunchCheckController', function ($scope) {
+.controller('LunchCheckController', IController);
+IController.$injector = ['$scope'];
+function IController ($scope) {
   //TODO: use $inject property to protect your code from minification
   $scope.lunchList = "";
   $scope.message = "";
   $scope.checkLunch = function(){
     //1. split the lunch list in indidivual lunch items(using split)
     var numberOfLunchItems = getNumberOfLunchItems($scope.lunchList);
-    //2. Decide which message to display depending of the numbe
-        //2.1 Lunch is empty(0): "Please enter data first"
+    //2. Decide which message to display depending of the number
+        //2.1 Lunch is empty(" "): "Please enter data first"
         if($scope.lunchList == ""){
           $scope.message = "Please enter data first";
         //2.2 #items <= 3: Enjoy
@@ -22,7 +24,7 @@ angular.module('LunchCheck', [])
           $scope.message = "Too much";
         }
       };
-});
+}
 
   function getNumberOfLunchItems(lunchInput){
     return lunchInput.split(",").length;
