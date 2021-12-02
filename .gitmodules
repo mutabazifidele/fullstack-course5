@@ -1,0 +1,4 @@
+[submodule "gh-pages"]
+	path = gh-pages
+	url = https://github.com/mutabazifidele/fullstack-course5.git
+	branch = gh-pages
