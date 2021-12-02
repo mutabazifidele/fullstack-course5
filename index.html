@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>github submodule</title>
+  </head>
+  <body>
+    <h1>Test git submodule</h1>
+    <p>
+
+    </p>
+    First, make sure to create a gh-pages branch, add at least one commit in it and push it to your GitHub repository.
+    Then, yes, you can add that gh-pages branch content as a subfolder of your current repository, in the master branch, using git submodule.
+    (unless, as explained here, you chose the master branch itself as source for GitHub Pages)
+
+    git checkout master
+    git submodule add -b gh-pages -- /remote/url/of/your/own/repo gh-pages
+    git commit -m "Add gh-pages branch as submodule"
+    git push
+    You will have a gh-pages subfolder, that you can update at any time with:
+
+    git submodule update --remote
+  </body>
+</html>
