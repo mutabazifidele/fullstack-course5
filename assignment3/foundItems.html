@@ -1,0 +1,17 @@
+
+
+
+  <table ng-if='menu.items!==""'>
+    <tr>
+      <th>Name</th>
+      <th>Short name</th>
+      <th>Description</th>
+    </tr>
+    <tr ng-repeat="item in menu.items">
+      <td>{{ item.short_name }} </td>  <td> {{ item.name }} </td> <td>{{item.description}}</td>
+      <td><button ng-click="menu.removeItem({index: $index });">Don't want this one!</button></td>
+    </tr>
+  </table>
+
+
+<!-- <div class="error" ng-if="found.cookiesInList()">WARNING! WARNING! COOKIES DETECTED!</div> -->
