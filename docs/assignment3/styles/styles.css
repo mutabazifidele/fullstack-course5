@@ -34,6 +34,25 @@ input[type="text"] {
   width: 100%;
   float: left;
 }
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+table td, table th {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  border-collapse:collapse;
+}
+
 @-webkit-keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
