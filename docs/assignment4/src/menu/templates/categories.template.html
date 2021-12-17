@@ -1,0 +1,10 @@
+<!-- <a ui-sref="categories">Categories</a> &lt; <span>Category</span> -->
+
+<h3> All categories</h3>
+<ol>
+  <li ng-repeat="category in categoriesList.categories">
+    <a ui-sref="items({short_name:category.short_name})">{{category.id}}, {{category.name }} , {{category.short_name}}, {{category.description}}</a>
+  </li>
+</ol>
+
+<ui-view></ui-view>
