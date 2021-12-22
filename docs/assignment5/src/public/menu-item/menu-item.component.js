@@ -10,7 +10,6 @@ angular.module('public')
   controller: MenuItemController
 });
 
-
 MenuItemController.$inject = ['ApiPath'];
 function MenuItemController(ApiPath) {
   var $ctrl = this;

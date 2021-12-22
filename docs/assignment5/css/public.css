@@ -36,6 +36,33 @@
   opacity: .8;
 }
 /* END HOME PAGE */
+/* SIGN UP PAGE */
+ #signUpFieldset {
+    padding-right: 15px;
+    padding-left: 15px;
+    Width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+ }
+ #signUpFieldset legend {
+    color: white;
+ }
+ input {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    color: black;
+ }
+ button {
+   background-color: black;
+ }
+ .formLabel {
+   width: 100px;
+ }
+ #confirmationMessage {
+   color: green;
+ }
+/* END SIGN UP PAGE */
 
 /* MENU CATEGORIES PAGE */
 .category-tile {

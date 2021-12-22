@@ -1,0 +1,35 @@
+
+<div>
+  <fieldset id="signUpFieldset" ng-if="myInfoCtrl.registered">
+      <legend>Personal info</legend>
+      <form name='regForm' id="signUpForm" novalidate>
+
+        <label for="firstname" class="formLabel">firstname: </label>
+          {{myInfoCtrl.userInfo.firstname}}
+          <br>
+
+          <!-- lastname -->
+        <label for="lastname" class="formLabel">lastname:</label>
+        {{myInfoCtrl.userInfo.lastname}}
+          <br>
+
+        <label for="email" class="formLabel">email: </label>
+        {{myInfoCtrl.userInfo.email}}
+          <br>
+
+        <label for="phone" class="formLabel">phone:</label>
+        {{myInfoCtrl.userInfo.phone}}
+          <br>
+
+        <label for="favoriteMenu" class="formLabel">favoriteMenu: </label>
+
+        <span ng-if="myInfoCtrl.userInfo.favoriteMenu!==''">{{myInfoCtrl.userInfo.favoriteMenu}}({{myInfoCtrl.favoriteMenuName}})
+          <img class="img-responsive" width="250" height="150" ng-src="images/menu/{{myInfoCtrl.userInfo.favoriteMenu}}/{{myInfoCtrl.userInfo.favoriteMenu}}.jpg" alt="{{myInfoCtrl.favoriteMenuName}}">
+        </span>
+          <br>
+      </form>
+  </fieldset>
+  <div class="" ng-if="!myInfoCtrl.registered">
+      Not sign up yet! <a ui-sref="public.signup">Sign Up Now!</a>
+  </div>
+</div>
